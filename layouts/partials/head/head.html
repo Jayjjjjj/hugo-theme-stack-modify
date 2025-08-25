@@ -1,11 +1,6 @@
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<head>
-<!-- 如果hugo的版本大于0.120,使用此参数{{ if not hugo.IsServer }} -->
-{{- if not .hugo.IsServer }}
-	{{ template "_internal/google_analytics.html" . }}
-{{- end }}
-</head>
+
 
 {{- $description := partialCached "data/description" . .RelPermalink -}}
 <meta name='description' {{ printf "content=%q" $description | safeHTMLAttr }}>
